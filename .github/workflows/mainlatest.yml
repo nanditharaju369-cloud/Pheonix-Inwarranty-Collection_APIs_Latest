@@ -36,6 +36,7 @@ jobs:
                     -r cli,htmlextra
 
           -  name: NewMan report
+             if: always()
              uses: actions/upload-artifact@v6.0.0
              with:
                name: NewMan Report
