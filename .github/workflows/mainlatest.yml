@@ -42,5 +42,13 @@ jobs:
                name: NewMan Report
                path: newman/*.html
 
+          - name: Creating GIT hub pages
+            if: always()
+            uses: peaceiris/actions-gh-pages@v4.0.0
+            with:
+              github-token: ${{ secrets.GITHUB-TOKEN }}
+              publish_dir: newman/
+            
+
                     
     
